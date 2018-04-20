@@ -7,25 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7AB44D2089326600CFA931 /* AssignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB44C2089326600CFA931 /* AssignViewController.m */; };
+		3D7AB45020895B0A00CFA931 /* EventmanagerEquimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB44F20895B0A00CFA931 /* EventmanagerEquimentViewController.m */; };
+		3D7AB453208A431500CFA931 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB452208A431500CFA931 /* ScannerViewController.m */; };
 		3DEA768A20852333003B913D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA768920852333003B913D /* AppDelegate.m */; };
-		3DEA768D20852333003B913D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA768C20852333003B913D /* ViewController.m */; };
 		3DEA769020852333003B913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA768E20852333003B913D /* Main.storyboard */; };
 		3DEA769220852333003B913D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA769120852333003B913D /* Assets.xcassets */; };
 		3DEA769520852333003B913D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA769320852333003B913D /* LaunchScreen.storyboard */; };
 		3DEA769820852333003B913D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA769720852333003B913D /* main.m */; };
+		3DEA76A020865A92003B913D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA769F20865A92003B913D /* LoginViewController.m */; };
+		3DEA76AC20865C1C003B913D /* MyriadPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA76AA20865C1B003B913D /* MyriadPro-Black.ttf */; };
+		3DEA76AD20865C1C003B913D /* MyriadPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA76AB20865C1C003B913D /* MyriadPro-Light.ttf */; };
+		3DEA76B020866719003B913D /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76AF20866719003B913D /* PreferencesViewController.m */; };
+		3DEA76B320869E13003B913D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76B220869E13003B913D /* HomeViewController.m */; };
+		3DEA76B62086BC0A003B913D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76B52086BC0A003B913D /* EventsViewController.m */; };
+		3DEA76B92087AE12003B913D /* AddNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76B82087AE12003B913D /* AddNewEventViewController.m */; };
+		3DEA76BC2087D55D003B913D /* EventManagerEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76BB2087D55D003B913D /* EventManagerEventViewController.m */; };
+		3DEA76BF2087FF28003B913D /* AddRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76BE2087FF28003B913D /* AddRequestViewController.m */; };
+		3DEA76C2208907FC003B913D /* EquipmentManagerEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76C1208907FC003B913D /* EquipmentManagerEventViewController.m */; };
+		3DEA76C5208914DC003B913D /* EquipmentManagerAssignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA76C4208914DC003B913D /* EquipmentManagerAssignViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D7AB44B2089326600CFA931 /* AssignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignViewController.h; sourceTree = "<group>"; };
+		3D7AB44C2089326600CFA931 /* AssignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignViewController.m; sourceTree = "<group>"; };
+		3D7AB44E20895B0A00CFA931 /* EventmanagerEquimentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventmanagerEquimentViewController.h; sourceTree = "<group>"; };
+		3D7AB44F20895B0A00CFA931 /* EventmanagerEquimentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventmanagerEquimentViewController.m; sourceTree = "<group>"; };
+		3D7AB451208A431500CFA931 /* ScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
+		3D7AB452208A431500CFA931 /* ScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
 		3DEA768520852332003B913D /* GearJuJu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GearJuJu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEA768820852333003B913D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DEA768920852333003B913D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3DEA768B20852333003B913D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3DEA768C20852333003B913D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3DEA768F20852333003B913D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DEA769120852333003B913D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DEA769420852333003B913D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DEA769620852333003B913D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DEA769720852333003B913D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DEA769E20865A92003B913D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3DEA769F20865A92003B913D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3DEA76AA20865C1B003B913D /* MyriadPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.ttf"; sourceTree = "<group>"; };
+		3DEA76AB20865C1C003B913D /* MyriadPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Light.ttf"; sourceTree = "<group>"; };
+		3DEA76AE20866719003B913D /* PreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		3DEA76AF20866719003B913D /* PreferencesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
+		3DEA76B120869E13003B913D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3DEA76B220869E13003B913D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3DEA76B42086BC0A003B913D /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		3DEA76B52086BC0A003B913D /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		3DEA76B72087AE12003B913D /* AddNewEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewEventViewController.h; sourceTree = "<group>"; };
+		3DEA76B82087AE12003B913D /* AddNewEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewEventViewController.m; sourceTree = "<group>"; };
+		3DEA76BA2087D55D003B913D /* EventManagerEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventManagerEventViewController.h; sourceTree = "<group>"; };
+		3DEA76BB2087D55D003B913D /* EventManagerEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventManagerEventViewController.m; sourceTree = "<group>"; };
+		3DEA76BD2087FF28003B913D /* AddRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddRequestViewController.h; sourceTree = "<group>"; };
+		3DEA76BE2087FF28003B913D /* AddRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddRequestViewController.m; sourceTree = "<group>"; };
+		3DEA76C0208907FC003B913D /* EquipmentManagerEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentManagerEventViewController.h; sourceTree = "<group>"; };
+		3DEA76C1208907FC003B913D /* EquipmentManagerEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquipmentManagerEventViewController.m; sourceTree = "<group>"; };
+		3DEA76C3208914DC003B913D /* EquipmentManagerAssignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentManagerAssignViewController.h; sourceTree = "<group>"; };
+		3DEA76C4208914DC003B913D /* EquipmentManagerAssignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquipmentManagerAssignViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +95,49 @@
 		3DEA768720852332003B913D /* GearJuJu */ = {
 			isa = PBXGroup;
 			children = (
+				3DEA76A920865C07003B913D /* Fonts */,
 				3DEA768820852333003B913D /* AppDelegate.h */,
 				3DEA768920852333003B913D /* AppDelegate.m */,
-				3DEA768B20852333003B913D /* ViewController.h */,
-				3DEA768C20852333003B913D /* ViewController.m */,
 				3DEA768E20852333003B913D /* Main.storyboard */,
 				3DEA769120852333003B913D /* Assets.xcassets */,
 				3DEA769320852333003B913D /* LaunchScreen.storyboard */,
 				3DEA769620852333003B913D /* Info.plist */,
 				3DEA769720852333003B913D /* main.m */,
+				3DEA769E20865A92003B913D /* LoginViewController.h */,
+				3DEA769F20865A92003B913D /* LoginViewController.m */,
+				3DEA76AE20866719003B913D /* PreferencesViewController.h */,
+				3DEA76AF20866719003B913D /* PreferencesViewController.m */,
+				3DEA76B120869E13003B913D /* HomeViewController.h */,
+				3DEA76B220869E13003B913D /* HomeViewController.m */,
+				3DEA76B42086BC0A003B913D /* EventsViewController.h */,
+				3DEA76B52086BC0A003B913D /* EventsViewController.m */,
+				3DEA76B72087AE12003B913D /* AddNewEventViewController.h */,
+				3DEA76B82087AE12003B913D /* AddNewEventViewController.m */,
+				3DEA76BA2087D55D003B913D /* EventManagerEventViewController.h */,
+				3DEA76BB2087D55D003B913D /* EventManagerEventViewController.m */,
+				3DEA76BD2087FF28003B913D /* AddRequestViewController.h */,
+				3DEA76BE2087FF28003B913D /* AddRequestViewController.m */,
+				3DEA76C0208907FC003B913D /* EquipmentManagerEventViewController.h */,
+				3DEA76C1208907FC003B913D /* EquipmentManagerEventViewController.m */,
+				3DEA76C3208914DC003B913D /* EquipmentManagerAssignViewController.h */,
+				3DEA76C4208914DC003B913D /* EquipmentManagerAssignViewController.m */,
+				3D7AB44B2089326600CFA931 /* AssignViewController.h */,
+				3D7AB44C2089326600CFA931 /* AssignViewController.m */,
+				3D7AB44E20895B0A00CFA931 /* EventmanagerEquimentViewController.h */,
+				3D7AB44F20895B0A00CFA931 /* EventmanagerEquimentViewController.m */,
+				3D7AB451208A431500CFA931 /* ScannerViewController.h */,
+				3D7AB452208A431500CFA931 /* ScannerViewController.m */,
 			);
 			path = GearJuJu;
+			sourceTree = "<group>";
+		};
+		3DEA76A920865C07003B913D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3DEA76AA20865C1B003B913D /* MyriadPro-Black.ttf */,
+				3DEA76AB20865C1C003B913D /* MyriadPro-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEA76AC20865C1C003B913D /* MyriadPro-Black.ttf in Resources */,
+				3DEA76AD20865C1C003B913D /* MyriadPro-Light.ttf in Resources */,
 				3DEA769520852333003B913D /* LaunchScreen.storyboard in Resources */,
 				3DEA769220852333003B913D /* Assets.xcassets in Resources */,
 				3DEA769020852333003B913D /* Main.storyboard in Resources */,
@@ -142,9 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEA768D20852333003B913D /* ViewController.m in Sources */,
+				3DEA76B92087AE12003B913D /* AddNewEventViewController.m in Sources */,
+				3D7AB45020895B0A00CFA931 /* EventmanagerEquimentViewController.m in Sources */,
+				3DEA76A020865A92003B913D /* LoginViewController.m in Sources */,
+				3DEA76B62086BC0A003B913D /* EventsViewController.m in Sources */,
+				3DEA76C5208914DC003B913D /* EquipmentManagerAssignViewController.m in Sources */,
+				3DEA76B020866719003B913D /* PreferencesViewController.m in Sources */,
+				3D7AB44D2089326600CFA931 /* AssignViewController.m in Sources */,
 				3DEA769820852333003B913D /* main.m in Sources */,
 				3DEA768A20852333003B913D /* AppDelegate.m in Sources */,
+				3D7AB453208A431500CFA931 /* ScannerViewController.m in Sources */,
+				3DEA76C2208907FC003B913D /* EquipmentManagerEventViewController.m in Sources */,
+				3DEA76BC2087D55D003B913D /* EventManagerEventViewController.m in Sources */,
+				3DEA76BF2087FF28003B913D /* AddRequestViewController.m in Sources */,
+				3DEA76B320869E13003B913D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -281,10 +363,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QE4M795CGF;
 				INFOPLIST_FILE = GearJuJu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pridegroup.GearJuJu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,10 +378,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QE4M795CGF;
 				INFOPLIST_FILE = GearJuJu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pridegroup.GearJuJu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
