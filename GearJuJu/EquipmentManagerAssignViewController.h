@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AssignViewController.h"
-@interface EquipmentManagerAssignViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface EquipmentManagerAssignViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate>
 
 
 
@@ -25,6 +25,8 @@
 @property (strong, nonatomic) NSString *category;
 @property (strong, nonatomic) NSString *equipment_request;
 @property (strong, nonatomic) NSString *assigned;
+@property (strong, nonatomic) NSString *requesterID;
+
 
 
 

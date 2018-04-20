@@ -20,6 +20,7 @@
 @synthesize event_id;
 @synthesize equipment;
 @synthesize requesterName;
+@synthesize requesterID;
 @synthesize requestDate;
 @synthesize request_id;
 @synthesize equipment_request;
@@ -32,6 +33,7 @@
 @synthesize requestQty;
 @synthesize category;
 @synthesize assigned;
+
 
 
 
@@ -65,7 +67,16 @@
     
     [self.requestsTableView reloadData];
     
+    self.navigationController.delegate = self;
     
+}
+
+
+- (void)navigationController:(UINavigationController *)navigationController
+      willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    NSLog(@"AAA");
+    [self.requestsTableView reloadData];
 }
 
 
@@ -178,18 +189,15 @@
         destViewController.requestQty = self.requestQty;
         destViewController.category = self.category;
         destViewController.event_id = self.event_id;
+        destViewController.request_id = self.request_id;
+        destViewController.requesterID = self.requesterID;
+        
+        
         
         
     }
 }
 
-
-//scanner
-
-- (IBAction)OpenScannerModal:(id)sender {
-    [self performSegueWithIdentifier:@"modalScannerSegue" sender:self];
-    
-}
 
 
 

@@ -15,5 +15,11 @@
 @property (weak, nonatomic) NSString *userRole;
 @property (weak, nonatomic) IBOutlet UITableView *EventsTableView;
 
+@property (weak, nonatomic) IBOutlet UIButton *AddNewEventButton;
+
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *TableConstrain;
+
 
 @end

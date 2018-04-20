@@ -28,6 +28,11 @@
 @synthesize equipmentName;
 @synthesize requestQty;
 @synthesize category;
+@synthesize action;
+
+@synthesize request_id;
+
+@synthesize requesterID;
 
 
 
@@ -41,11 +46,29 @@
     self.equipmentNameLabel.text = self.equipmentName;
     self.requestQtyLabel.text = self.requestQty;
     self.categoryLabel.text = self.category;
-    
     [self get_assigned_equipments];
     
-    
+   
+ 
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // unregister for keyboard notifications while not visible.
+
+}
+
+- (void)reloadTableFromAssign
+{
+    // this method gets called in MainVC when your SecondVC is dismissed
+    [self get_assigned_equipments];
+}
+
+
+
+
 
 
 -(void)get_assigned_equipments{
@@ -225,6 +248,44 @@
 - (IBAction)back:(id)sender {
     [[self navigationController] popViewControllerAnimated:YES];
 }
+
+
+//scanner
+
+- (IBAction)openSacnner:(id)sender {
+    
+    
+    // Set self to listen for the message "SecondViewControllerDismissed"
+    // and run a method when this message is detected
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(reloadTableFromAssign)
+     name:@"AssignSuccess"
+     object:nil];
+    
+    
+    self.action = [NSString stringWithFormat:@"assign"];
+    [self performSegueWithIdentifier:@"modalScannerSegue" sender:self];
+    
+}
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"modalScannerSegue"]) {
+        ScannerViewController *destViewController = segue.destinationViewController;
+        destViewController.action = self.action;
+        destViewController.event = self.event_id;
+        destViewController.equipment_request = self.equipment_request;
+        destViewController.gear_request = self.request_id;
+        destViewController.requesterID = self.requesterID;
+    }
+    
+}
+
+
+
 
 /*
 #pragma mark - Navigation

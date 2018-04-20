@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
-
+@property (assign,nonatomic)BOOL updating;
 
 @end
 
@@ -20,7 +20,7 @@
 @synthesize password;
 @synthesize EmailTextField;
 @synthesize PasswordTextField;
-
+@synthesize debugLabel;
 
 
 - (void)viewDidLoad {
@@ -34,6 +34,78 @@
     self.PasswordTextField.tag = 101;
     
     
+    self.updating = NO;
+    self.device = [UIDevice currentDevice] ;
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
+    
+    
+    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[Captuvo sharedCaptuvoDevice] addCaptuvoDelegate:self];
+    [[Captuvo sharedCaptuvoDevice] startDecoderHardware];
+    [[Captuvo sharedCaptuvoDevice] startPMHardware];
+    
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self check_scanner];
+    });
+    
+    
+}
+
+-(void)check_scanner{
+    
+    BatteryStatus BatteryStatus = [[Captuvo sharedCaptuvoDevice]getBatteryStatus];
+   
+    
+        
+        switch (BatteryStatus) {
+            case BatteryStatusPowerSourceConnected:
+               
+                break;
+            case BatteryStatus4Of4Bars:
+                
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo 4: %d", BatteryStatus];
+                NSLog(@"Captuvo 4: %d", BatteryStatus);
+                
+                break;
+            case BatteryStatus3Of4Bars:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo 3: %d", BatteryStatus];
+               NSLog(@"Captuvo 3: %d", BatteryStatus);
+                break;
+            case BatteryStatus2Of4Bars:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo 2: %d", BatteryStatus];
+               NSLog(@"Captuvo 2: %d", BatteryStatus);
+                break;
+            case BatteryStatus1Of4Bars:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo 1: %d", BatteryStatus];
+                NSLog(@"Captuvo 1: %d", BatteryStatus);
+                break;
+            case BatteryStatus0Of4Bars:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo 0: %d", BatteryStatus];
+               NSLog(@"Captuvo 0: %d", BatteryStatus);
+            break;
+           
+            case BatteryStatusUndefined:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo unde: %d", BatteryStatus];
+                NSLog(@"Captuvo unde: %d", BatteryStatus);
+                break;
+                
+            default:
+                self.debugLabel.text = [NSString stringWithFormat:@"Captuvo defa: %d", BatteryStatus];
+                NSLog(@"Captuvo defa: %d", BatteryStatus);
+                break;
+                
+        }
+        
+    
+    
+   
     
 }
 
@@ -49,6 +121,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
+    
+    [[Captuvo sharedCaptuvoDevice] removeCaptuvoDelegate:self];
+    [[Captuvo sharedCaptuvoDevice] stopDecoderHardware];
+    [[Captuvo sharedCaptuvoDevice] stopPMHardware];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -176,7 +253,7 @@
         request.HTTPMethod = @"POST";
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         // 3
-        NSDictionary *dictionary = @{@"email": @"Equipment@PrideGroup.us", @"password": @"antani73"};
+        NSDictionary *dictionary = @{@"email": @"mandym@pridegroup.us", @"password": @"antani73"};
         NSError *error = nil;
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
                                                        options:kNilOptions error:&error];

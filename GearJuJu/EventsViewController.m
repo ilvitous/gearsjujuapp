@@ -19,6 +19,9 @@
 @synthesize bearer;
 @synthesize EventsTableView;
 @synthesize userRole;
+@synthesize AddNewEventButton;
+@synthesize TableConstrain;
+
 
 
 - (void)viewDidLoad {
@@ -39,6 +42,12 @@
     
     [self get_all_events];
     
+    if([self.userRole isEqualToString:@"Equipment Manager"]){
+        self.AddNewEventButton.hidden = true;
+        
+        self.TableConstrain.constant = -50;
+        [self.EventsTableView setNeedsUpdateConstraints];
+    }
     
     
     

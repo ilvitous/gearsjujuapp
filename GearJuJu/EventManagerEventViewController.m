@@ -17,7 +17,7 @@
 @implementation EventManagerEventViewController
 @synthesize TitleLabel;
 @synthesize event_title;
-
+@synthesize action;
 
 
 - (void)viewDidLoad {
@@ -203,6 +203,15 @@
 */
 
 
+//scanner
+
+- (IBAction)openScannerConsign:(id)sender {
+    self.action = [NSString stringWithFormat:@"consign"];
+    [self performSegueWithIdentifier:@"modalScannerConsign" sender:self];
+}
+
+
+
 //button actions
 
 - (IBAction)back:(id)sender {
@@ -222,8 +231,12 @@
         AddRequestViewController *destViewController = segue.destinationViewController;
         destViewController.event_id = self.event_id;
         destViewController.event_title = self.event_title;
-        
-        
+    }
+    
+    if ([segue.identifier isEqualToString:@"modalScannerConsign"]) {
+        ScannerViewController *destViewController = segue.destinationViewController;
+        destViewController.action = self.action;
+        destViewController.event = self.event_id;
     }
     
     

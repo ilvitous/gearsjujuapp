@@ -10,6 +10,8 @@
 		3D7AB44D2089326600CFA931 /* AssignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB44C2089326600CFA931 /* AssignViewController.m */; };
 		3D7AB45020895B0A00CFA931 /* EventmanagerEquimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB44F20895B0A00CFA931 /* EventmanagerEquimentViewController.m */; };
 		3D7AB453208A431500CFA931 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AB452208A431500CFA931 /* ScannerViewController.m */; };
+		3D7AB456208A590A00CFA931 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7AB455208A590A00CFA931 /* ExternalAccessory.framework */; };
+		3D7AB45B208A597500CFA931 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7AB458208A597300CFA931 /* libCaptuvoSDK.a */; };
 		3DEA768A20852333003B913D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA768920852333003B913D /* AppDelegate.m */; };
 		3DEA769020852333003B913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA768E20852333003B913D /* Main.storyboard */; };
 		3DEA769220852333003B913D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA769120852333003B913D /* Assets.xcassets */; };
@@ -35,6 +37,10 @@
 		3D7AB44F20895B0A00CFA931 /* EventmanagerEquimentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventmanagerEquimentViewController.m; sourceTree = "<group>"; };
 		3D7AB451208A431500CFA931 /* ScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
 		3D7AB452208A431500CFA931 /* ScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		3D7AB455208A590A00CFA931 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		3D7AB458208A597300CFA931 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
+		3D7AB459208A597400CFA931 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
+		3D7AB45A208A597500CFA931 /* Captuvo+PrivateAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Captuvo+PrivateAPI.h"; sourceTree = "<group>"; };
 		3DEA768520852332003B913D /* GearJuJu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GearJuJu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEA768820852333003B913D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DEA768920852333003B913D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,17 +76,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7AB456208A590A00CFA931 /* ExternalAccessory.framework in Frameworks */,
+				3D7AB45B208A597500CFA931 /* libCaptuvoSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D7AB454208A590A00CFA931 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D7AB455208A590A00CFA931 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D7AB457208A595500CFA931 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3D7AB459208A597400CFA931 /* Captuvo.h */,
+				3D7AB45A208A597500CFA931 /* Captuvo+PrivateAPI.h */,
+				3D7AB458208A597300CFA931 /* libCaptuvoSDK.a */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		3DEA767C20852332003B913D = {
 			isa = PBXGroup;
 			children = (
 				3DEA768720852332003B913D /* GearJuJu */,
 				3DEA768620852332003B913D /* Products */,
+				3D7AB454208A590A00CFA931 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +122,7 @@
 		3DEA768720852332003B913D /* GearJuJu */ = {
 			isa = PBXGroup;
 			children = (
+				3D7AB457208A595500CFA931 /* include */,
 				3DEA76A920865C07003B913D /* Fonts */,
 				3DEA768820852333003B913D /* AppDelegate.h */,
 				3DEA768920852333003B913D /* AppDelegate.m */,
@@ -365,6 +393,10 @@
 				INFOPLIST_FILE = GearJuJu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GearJuJu/include",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = us.pridegroup.GearJuJu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -380,6 +412,10 @@
 				INFOPLIST_FILE = GearJuJu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GearJuJu/include",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = us.pridegroup.GearJuJu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

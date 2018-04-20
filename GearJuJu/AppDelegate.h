@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Captuvo.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CaptuvoEventsProtocol>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -205,9 +205,17 @@
 }
 
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
     if ([segue.identifier isEqualToString:@"modalScannerSegue"]) {
+        ScannerViewController *destViewController = segue.destinationViewController;
+        destViewController.action = self.action;
+    }
+    
+    
+    if ([segue.identifier isEqualToString:@"modalScannerConsign"]) {
         ScannerViewController *destViewController = segue.destinationViewController;
         destViewController.action = self.action;
     }

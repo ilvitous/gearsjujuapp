@@ -24,6 +24,7 @@
 @synthesize requestsTableView;
 @synthesize equipment;
 @synthesize requesterName;
+@synthesize requesterID;
 @synthesize requestDate;
 @synthesize request_id;
 @synthesize assigned;
@@ -231,6 +232,8 @@
 //    name
     NSDictionary *user = [ [self.requests objectAtIndex:indexPath.row] valueForKey:@"user"];
     self.requesterName = [user valueForKey:@"name"];
+    self.requesterID = [user valueForKey:@"id"];
+    
     
 //date
 
@@ -241,6 +244,9 @@
     [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm a"];
     self.requestDate = [dateFormatter stringFromDate:requestedDate];
     self.request_id = [ [self.requests objectAtIndex:indexPath.row] valueForKey:@"id"];
+    
+    
+//    user request
     
     
     
@@ -259,7 +265,7 @@
     destViewController.requestDate = self.requestDate;
     destViewController.request_id = self.request_id;
     destViewController.assigned = self.assigned;
-    
+    destViewController.requesterID =  self.requesterID;
     
     
     

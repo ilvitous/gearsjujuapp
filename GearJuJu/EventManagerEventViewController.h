@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AddRequestViewController.h"
-
+#import "ScannerViewController.h"
 
 
 @interface EventManagerEventViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *pNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *AssignedEquipmentTableView;
+
+@property (strong, nonatomic) NSString *action;
 
 
 @end

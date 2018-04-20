@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSString *equipment;
 @property (strong, nonatomic) NSString *requesterName;
+@property (strong, nonatomic) NSString *requesterID;
 @property (strong, nonatomic) NSString *requestDate;
 @property (strong, nonatomic) NSString *request_id;
 

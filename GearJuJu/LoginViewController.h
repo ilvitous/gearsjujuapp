@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+#import "Captuvo.h"
+#import "AppDelegate.h"
+
+
+
+@interface LoginViewController : UIViewController<UITextFieldDelegate,CaptuvoEventsProtocol>
 
 @property (strong, nonatomic) UIAlertController *alert;
 
@@ -20,6 +25,10 @@
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;
 
+
+//scanner
+@property (weak, nonatomic) UIDevice *device ;
+@property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 
 
 @end
